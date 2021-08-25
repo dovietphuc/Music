@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.AllSongsFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_songs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/summary"
+        tools:listitem="@layout/songs_item" />
+
+    <include
+        android:id="@+id/summary"
+        layout="@layout/summary"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignEnd="@+id/list_songs"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        />
+
+</RelativeLayout>
